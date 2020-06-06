@@ -1,0 +1,50 @@
+<h1>Índice Ambiental</h1>
+
+<hr>
+
+
+<div class="table-responsive-sm">
+
+    <table class="table mt-5 fadeIn faster">
+
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Humedad</th>
+                <th scope="col">Nivel</th>
+                <th scope="col">Temperatura</th>
+                <th scope="col">Índice Ambiental</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>16</td>
+                <td>90</td>
+                <td>50</td>
+                <td>60</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+
+<!-- *ngIf="!cargando && registros.length === 0"  -->
+<div class="alert alert-warning text-center mt-3 animated fadeIn faster">
+    <h4 class="alert-heading">No hay registros</h4>
+    <p>
+        <i class="fa fa-exclamation fa-2x"></i>
+    </p>
+</div>
+
+<!-- *ngIf="cargando"-->
+<div class="alert alert-info text-center mt-3 animated fadeIn faster">
+    <h4 class="alert-heading">Cargando</h4>
+    <p>
+        <i class="fa fa-sync-alt fa-spin fa-2x"></i>
+    </p>
+    <p class="mb-0">
+        Espere por favor...
+    </p>
+</div>

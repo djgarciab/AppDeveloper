@@ -1,0 +1,100 @@
+<h1>Datos</h1>
+
+<hr>
+<div class="row">
+    <div class="col-4 ">
+        <div class="table-responsive-sm">
+
+            <table class="table mt-5 fadeIn faster">
+
+                <thead>
+                    <tr>
+                        <h3>Temperaturas</h3>
+                    </tr>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Temperatura</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let temperatura of temperaturas; let i=index;">
+                        <td>{{temperatura.id}}</td>
+                        <td>{{temperatura.ENG}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="col-4 ">
+        <div class="table-responsive-sm">
+
+            <table class="table mt-5 fadeIn faster">
+
+                <thead>
+                    <tr>
+                        <h3>Niveles</h3>
+                    </tr>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nivel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let nivel of niveles; let i=index;">
+                        <td>{{nivel.id}}</td>
+                        <td>{{nivel.ENG}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="col-4 ">
+        <div class="table-responsive-sm">
+
+            <table class="table mt-5 fadeIn faster">
+
+                <thead>
+                    <tr>
+                        <h3>Humedades</h3>
+                    </tr>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Humedad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let humedad of humedades; let i=index;">
+                        <td>{{humedad.id}}</td>
+                        <td>{{humedad.ENG}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+
+<div *ngIf="cargando" class="alert alert-info text-center mt-3 animated fadeIn faster">
+    <h4 class="alert-heading">Cargando</h4>
+    <p>
+        <i class="fa fa-sync-alt fa-spin fa-2x"></i>
+    </p>
+    <p class="mb-0">
+        Espere por favor...
+    </p>
+</div>
+
+<!-- *ngIf="!cargando && temperaturas.length === 0"  -->
+<!--
+<div *ngIf="!cargando" class="alert alert-warning text-center mt-3 animated fadeIn faster">
+    <h4 class="alert-heading">No hay registros en temperaturas</h4>
+    <p>
+        <i class="fa fa-exclamation fa-2x"></i>
+    </p>
+</div>
+-->
